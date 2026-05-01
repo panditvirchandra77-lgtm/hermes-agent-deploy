@@ -24,6 +24,9 @@ RUN mkdir -p /root/.hermes
 # Make venv activate on shell entry
 ENV PATH="/opt/hermes-agent/venv/bin:$PATH"
 
+# ATXP Connection
+ENV ATXP_CONNECTION="https://accounts.atxp.ai?connection_token=D7J1ICmWzYtMSFyv9MTgR"
+
 # Default port for gateway
 EXPOSE 8080
 
