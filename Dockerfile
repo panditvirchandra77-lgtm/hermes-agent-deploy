@@ -27,8 +27,8 @@ ENV PATH="/opt/hermes-agent/venv/bin:$PATH"
 # ATXP Connection
 ENV ATXP_CONNECTION="https://accounts.atxp.ai?connection_token=D7J1ICmWzYtMSFyv9MTgR"
 
-# Default port for gateway
-EXPOSE 8080
+# Default port for API server
+EXPOSE 7860
 
-# Start gateway
-CMD ["hermes", "gateway", "run"]
+# Start API server
+CMD ["hermes", "start", "--api-server", "--host", "0.0.0.0", "--port", "7860"]
